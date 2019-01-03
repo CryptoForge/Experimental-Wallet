@@ -1,53 +1,65 @@
-/*
- * Every class name will be hashed so it can be used their own component scoped
- * Use classes instead of ids
- */
-
-._1S2e0v-Hsq59CJKiB9h-4C {
-    height: 100px;
-}
-/*
- * Every class name will be hashed so it can be used their own component scoped
- * Use classes instead of ids
- */
-
-._29aw_R5k2KsQVSNBJTu7U5 {
-    color: var(--primary-color);    /* Using global constants example */
+._3qvIeMQ9zS10DX4gEUSCYF {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
 }
 
-._uvxNHFF_5yCj0xAzeYli {                 /* Composition example */
-    text-decoration: none;
-}
-/*
- * Global constants goes here
- */
-:root {
-    --primary-color: #42b983;
+._3qvIeMQ9zS10DX4gEUSCYF > * {
+  padding: 0px;
+  flex: 1 100%;
 }
 
-
-/*
- * Global CSS goes here, it requires to use :global before each style
- */
-html {
-    height: 100%;
+._8uBbuB9hE7VSm7dtCRJJH {
+  background: tomato;
 }
+
+._3CnnLklTmoFnXNvIQQr30l {
+  background: lightgreen;
+}
+
+._3S4ygZ2NKOasHzpOHj11Mu {
+  text-align: left;
+  background: deepskyblue;
+}
+
+._3Gp7R0OwAvduxH52I0RkHk {
+  background: gold;
+}
+
+._2lpq6wndV6iABeOY6v51ZF {
+  background: hotpink;
+}
+
+@media all and (min-width: 600px) {
+  ._1AFQZP3mr4qfTXUMOgZtKv { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  ._3S4ygZ2NKOasHzpOHj11Mu    { flex: 3 0px; }
+  ._3Gp7R0OwAvduxH52I0RkHk { order: 1; }
+  ._3S4ygZ2NKOasHzpOHj11Mu    { order: 2; }
+  ._2lpq6wndV6iABeOY6v51ZF { order: 3; }
+  ._3CnnLklTmoFnXNvIQQr30l  { order: 4; }
+}
+
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    margin: auto;
+  padding: 0em;
 }
-#app {
-    color: #2c3e50;
-    max-width: 600px;
-    font-family: Source Sans Pro, Helvetica, sans-serif;
+.vD6PNdmWWKSa6kP8B9rHL {
+    background-color: white;
+}
+
+._190YKsPfn6nvsqf63t6FMo {
     text-align: center;
+    padding: 15px;
+    font-size:  17px;
+    border: 2px solid #ffd700;
+    background: #000000;
+    color: #ffd700;
 }
-#app p {
-    text-align: justify;
+
+._6Tk13R5hdeyfM_RbzLNNC {
+
 }
-.hello {
-    color: var(--primary-color);
-}
+

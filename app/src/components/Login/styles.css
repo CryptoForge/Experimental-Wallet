@@ -1,0 +1,16 @@
+.main {
+    background-color: white;
+}
+
+.input {
+    text-align: center;
+    padding: 15px;
+    font-size:  17px;
+    border: 2px solid #ffd700;
+    background: #000000;
+    color: #ffd700;
+}
+
+.button {
+
+}

@@ -1,57 +1,57 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
-import Logo from './components/Logo/'
-import Link from './components/Link/'
+import PropTypes from 'prop-types'
+import React from 'react'
 
-import ElectronImg from './assets/electron.png'
-import ReactImg from './assets/react.png'
-import WebpackImg from './assets/webpack.png'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { render } from 'react-dom'
 
-const logos = [
-    ElectronImg,
-    ReactImg,
-    WebpackImg
-]
+import styles from './styles.css'
+
+import Login from './components/Login/LoginPage'
 
 
-export default class App extends Component {
-    render() {
-        const logosRender = logos.map( (logo, index) => {
-            return <Logo key = {index} src = { logo } />
-        })
 
+class App extends React.Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      pageSelection: 0
+    }
+  }
+
+  render() {
         return (
-            <div>
-                {logosRender}
-
-                <div className="hello">
-                    <h1>Hello React!</h1>
-                </div>
-
-                <p>
-                    If you are trying to build Electron apps using React, or you just
-                    want to play around with them, feel free to use this
-                    seed as a starting point.
-                </p>
-
-                <p>
-                    Pay attention to how everything inside src/ folder is bundled
-                    into build/ folder, how global and scoped CSS work, how to compose
-                    React components, or simply how Webpack changes relative
-                    image paths to public paths after bundling the assets.
-                </p>
-
-                <p>
-                    Check out the docs for&nbsp;
-                    <Link to='https://electronjs.org/docs'>Electron</Link>,&nbsp;
-                    <Link to='https://reactjs.org/docs/hello-world.html'>React </Link> and&nbsp;
-                    <Link to='https://webpack.js.org/configuration/'>Webpack 4</Link>.
-                    Customize this template as you wish by adding any fancy tool
-                    you are used to. If you have any issue, please file an issue at this seed's&nbsp;
-                    <Link to='https://github.com/pastahito/electron-react-webpack'>
-                    repository</Link>.
-                </p>
+            <div className={styles.wrapper}>
+              <header className={styles.header}>Header</header>
+                <article className={styles.main}>
+                  <Login/>
+                </article>
+                <aside className={styles.aside} className={styles.asideA}>Aside 1</aside>
+                <aside className={styles.aside} className={styles.asideB}>Aside 2</aside>
+              <footer className={styles.footer}>Footer</footer>
             </div>
         )
     }
 }
+
+
+App.propTypes = {
+  context: PropTypes.object.isRequired
+}
+
+function mapStateToProps (state) {
+  return {
+    context: state.context
+  }
+}
+
+function matchDispatchToProps (dispatch) {
+  return bindActionCreators(
+    {
+    },
+    dispatch
+  )
+}
+
+export default connect(mapStateToProps, matchDispatchToProps)(App)
